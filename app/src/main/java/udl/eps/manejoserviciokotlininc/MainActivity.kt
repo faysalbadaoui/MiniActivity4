@@ -1,8 +1,10 @@
 package udl.eps.manejoserviciokotlininc
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import udl.eps.manejoserviciokotlininc.databinding.ActivityMainBinding
 
 
@@ -21,9 +23,10 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
     }
 
     override fun onClick(src: View) {
-
+        val intent = Intent(this, ElServicio::class.java)
         when(src.id) {
-            R.id.btnIn -> startService(intent)
+            R.id.btnIn -> {startService(intent)
+            Toast.makeText(this, "Sound start clicked!", Toast.LENGTH_LONG).show()}
             R.id.btnFin -> stopService(intent)
         }
     }
