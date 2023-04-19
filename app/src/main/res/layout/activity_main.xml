@@ -28,7 +28,7 @@
         </Button>
 
         <Button
-            android:text="@string/botoIn"
+            android:text="@string/botoInC"
             android:id="@+id/btnInC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
