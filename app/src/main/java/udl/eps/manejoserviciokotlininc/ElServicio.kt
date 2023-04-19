@@ -16,9 +16,7 @@ class ElServicio: Service() {
 
     override fun onCreate() {
         super.onCreate()
-        Toast.makeText(this, R.string.creaserv, Toast.LENGTH_LONG).show()
-        player = MediaPlayer.create()
-        player!!.isLooping = true
+        Toast.makeText(this, "Service created", Toast.LENGTH_LONG).show()
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
