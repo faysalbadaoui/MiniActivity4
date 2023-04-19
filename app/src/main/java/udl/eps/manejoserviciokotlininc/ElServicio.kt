@@ -38,10 +38,10 @@ class ElServicio: Service() {
 
     override fun onDestroy() {
         super.onDestroy()
-        if (player != null && player!!.isPlaying) {
+        if (player!!.isPlaying) {
             player!!.stop()
         }
-        if (playerS != null && playerS!!.isPlaying) {
+        if (playerS!!.isPlaying) {
             playerS!!.stop()
         }
         Toast.makeText(this, R.string.finaserv, Toast.LENGTH_LONG).show()
