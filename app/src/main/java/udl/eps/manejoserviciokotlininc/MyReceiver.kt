@@ -13,7 +13,7 @@ class MyReceiver : BroadcastReceiver() {
         if (intent != null) {
             if (intent.getIntExtra("state", 0) == 0) {
                 Toast.makeText(context, "Not Plugged", Toast.LENGTH_LONG).show()
-                context?.stopService(intentService)
+                //context?.stopService(intentService)
             } else {
                 intentService.putExtra("type", "song")
                 Toast.makeText(context, "Plugged", Toast.LENGTH_LONG).show()
