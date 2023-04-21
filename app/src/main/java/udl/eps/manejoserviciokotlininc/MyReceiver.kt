@@ -6,7 +6,7 @@ import android.content.Intent
 
 class MyReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        
+
     }
 
 }

@@ -24,19 +24,17 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
     }
 
     override fun onClick(src: View) {
-        val intent = Intent(this, ElServicio::class.java)
+        val intent = Intent(this, MyReceiver::class.java)
 
         when(src.id) {
             R.id.btnIn -> {
                 intent.putExtra("type", "train")
-                startService(intent)
                 Toast.makeText(this, "Sound start clicked!", Toast.LENGTH_LONG).show()
             }
-            R.id.btnFin -> stopService(intent)
             R.id.btnInC -> {
                 intent.putExtra("type", "song")
-                startService(intent)
             }
         }
+        sendBroadcast(intent)
     }
 }
