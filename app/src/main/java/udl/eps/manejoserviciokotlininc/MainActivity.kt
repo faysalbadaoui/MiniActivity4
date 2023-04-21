@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
 
     override fun onClick(src: View) {
         val intent = Intent(this, ElServicio::class.java)
-
         when(src.id) {
             R.id.btnIn -> {
                 intent.putExtra("type", "train")
